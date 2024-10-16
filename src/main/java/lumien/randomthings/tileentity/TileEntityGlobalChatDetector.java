@@ -122,7 +122,7 @@ public class TileEntityGlobalChatDetector extends TileEntityBase implements ITic
 
 	public boolean checkMessage(EntityPlayerMP entityPlayerMP, String sendMessage)
 	{
-		if (!this.world.isRemote)
+		if (this.world != null && !this.world.isRemote)
 		{
 			UUID sendUUID = entityPlayerMP.getGameProfile().getId();
 			if (sendUUID != null && this.chatMessage.equals(sendMessage))

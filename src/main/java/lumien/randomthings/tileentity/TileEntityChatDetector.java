@@ -125,7 +125,7 @@ public class TileEntityChatDetector extends TileEntityBase implements ITickable
 
 	public boolean checkMessage(EntityPlayerMP entityPlayerMP, String sendMessage)
 	{
-		if (!this.world.isRemote)
+		if (this.world != null && !this.world.isRemote)
 		{
 			UUID sendUUID = entityPlayerMP.getGameProfile().getId();
 			if (sendUUID != null && sendUUID.equals(this.playerUUID))
