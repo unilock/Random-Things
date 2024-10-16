@@ -229,7 +229,7 @@ public class BlockCustomWorkbench extends BlockContainerBase
 	{
 		private final World world;
 		private final BlockPos position;
-		private static final String __OBFID = "CL_00002127";
+//		private static final String __OBFID = "CL_00002127";
 
 		public InterfaceCraftingTable(World worldIn, BlockPos pos)
 		{

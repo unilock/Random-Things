@@ -14,10 +14,10 @@ import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.IRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import mezz.jei.util.Translator;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.translation.I18n;
 
 public class ImbuingRecipeCategory implements IRecipeCategory
 {
@@ -43,7 +43,7 @@ public class ImbuingRecipeCategory implements IRecipeCategory
 	{
 		ResourceLocation location = new ResourceLocation("randomthings:textures/gui/imbuingStation.png");
 		background = guiHelper.createDrawable(location, 32, 6, 112, 112, 0, 0, 0, 0);
-		localizedName = Translator.translateToLocal("tile.imbuingStation.name");
+		localizedName = I18n.translateToLocal("tile.imbuingStation.name");
 
 		slotDrawable = guiHelper.getSlotDrawable();
 	}

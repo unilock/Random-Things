@@ -1,15 +1,22 @@
-/*
-!/.gitignore
-!/gradle/
-!/gradle/*
-!/gradle*
-!/src/
-!/src/*
-!/*.gradle
-!/*.md
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
 .gradle
-Thumbs.db
-Update.bat
-*.psd
-/libs/*
-/libs/
+
+# other
+eclipse
+run

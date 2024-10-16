@@ -20,7 +20,7 @@ public class RenderSpecialChest extends TileEntitySpecialRenderer
 
 	private ModelChest simpleChest = new ModelChest();
 	private boolean isChristams;
-	private static final String __OBFID = "CL_00000965";
+//	private static final String __OBFID = "CL_00000965";
 
 	public RenderSpecialChest()
 	{

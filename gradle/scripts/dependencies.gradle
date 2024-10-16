@@ -1,0 +1,35 @@
+apply from: 'gradle/scripts/helpers.gradle'
+
+repositories {
+    maven {
+        name 'BlameJared'
+        url 'https://maven.blamejared.com/'
+    }
+    maven {
+        name 'OpenComputers'
+        url 'https://maven.cil.li/'
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name 'CurseMaven'
+                url 'https://cursemaven.com/'
+            }
+        }
+        filter {
+            includeGroup 'curse.maven'
+        }
+    }
+    mavenLocal() // Must be last for caching to work
+}
+
+dependencies {
+    // Include StripLatestForgeRequirements by default for the dev env, saves everyone a hassle
+    runtimeOnly 'com.cleanroommc:strip-latest-forge-requirements:1.0'
+
+    implementation rfg.deobf('curse.maven:baubles-227083:2518667')
+
+    compileOnly 'li.cil.oc:OpenComputers:MC1.12.2-1.7.5.221:api'
+    compileOnly 'mezz.jei:jei_1.12.2:4.16.1.1012:api'
+    runtimeOnly rfg.deobf('mezz.jei:jei_1.12.2:4.16.1.1012')
+}
